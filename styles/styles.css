@@ -1,0 +1,244 @@
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Lobster", sans-serif;
+}
+
+.section-parrafo {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+  background-color: whitesmoke;
+  height: vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+
+}
+
+.logo {
+  max-width: 10rem;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.list {
+  display: flex;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.conteiner {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-inline: 2rem;
+}
+
+.inicio {
+  display: grid;
+  grid-template-columns: .35fr 1fr;
+  grid-template-areas:
+    "foto titulo"
+    "foto texto";
+  column-gap: 2rem;
+  padding-block: 3rem;
+}
+
+.imginicio {
+  grid-area: foto;
+
+}
+
+.inicio-titulo {
+  grid-area: titulo;
+}
+
+.inicio-parrafo {
+  grid-area: texto;
+}
+
+.sabores {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "titulo titulo titulo"
+    "foto foto foto"
+    "texto  . boton ";
+  column-gap: 5rem;
+  padding-block: 3rem;
+  gap: 1.5rem;
+
+}
+
+.img-sabores {
+  grid-area: foto;
+  width: 80vw;
+  height: auto;
+
+}
+
+.section-titulo {
+  grid-area: titulo;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+
+}
+
+.section-parrafo {
+  grid-area: texto;
+}
+
+.btn {
+  grid-area: boton;
+}
+
+.img-auto {
+  width: 80vw;
+}
+
+.inicio-autohelado {
+  column-gap: 5rem;
+  padding-block: 3rem;
+  gap: 1.5rem;
+}
+
+footer {
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.redes-sociales {
+  list-style: none;
+  display: inline;
+  height: svh;
+  width: auto;
+  display: flex;
+  gap: 20px;
+
+}
+
+.derechos {
+  color: darksalmon;
+  font-size: 15px;
+
+}
+
+.creados {
+  color: darksalmon;
+  font-size: 15px;
+
+}
+
+.imgwapp {
+  height: 8vh;
+  width: auto;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+.img {
+  height: 8vh;
+  width: auto;
+}
+
+.conteinerpages {
+  margin: 50px;
+  max-width: 1000px;
+  padding-inline: 2rem;
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  width: 30vw;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+input:focus {
+  background-color: bisque;
+}
+
+.imgsab {
+  width: 80vw;
+  height: auto;
+}
+
+.imgsab:hover {
+  scale: 1.2;
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+  .inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titulo "
+      "foto "
+      "texto ";
+  }
+
+  .imginicio {
+    grid-area: foto;
+  }
+
+  .inicio-titulo {
+    grid-area: titulo;
+  }
+
+  .inicio-parrafo {
+    grid-area: texto;
+
+
+  }
+
+  footer {
+    display: grid;
+    grid-template-areas:
+      "redes"
+      "derechos"
+      "creados"
+    ;
+  }
+
+  .derechos {
+    grid-area: derechos;
+  }
+
+  .creados {
+    grid-area: creados;
+
+  }
+
+  .redes-sociales {
+    grid-area: redes;
+  }
+
+
+}
