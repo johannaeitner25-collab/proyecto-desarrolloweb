@@ -1,0 +1,18 @@
+@use "variables" as v;
+
+.sucursales {
+
+@include v.flex(column, center, center, wrap);
+.conteinerpages {
+  margin: 500px;
+  max-width: 1000vw;
+  padding-inline: 2rem;
+  color:black;
+  top: 0;
+}
+
+.mapa {
+     width: 80vw;
+  height: auto;
+}
+}

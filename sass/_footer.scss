@@ -1,0 +1,52 @@
+@use "variables" as v;
+
+footer {
+  color: darksalmon;
+  height: 10vh;
+  @include v.flex(row, space-around, center, wrap);
+  ul {
+    display: flex;
+    gap: 20px;
+    li {
+      list-style: none;
+    }
+  }
+  .redes-sociales {
+    list-style: none;
+    height: svh;
+    width: auto;
+    gap: 20px;
+    .img {
+      height: 8vh;
+      width: auto;
+    }
+  }
+  .derechos {
+    font-size: 15px;
+  }
+    .creado {
+    font-size: 15px;
+  }
+  .imgwapp {
+    height: 8vh;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+  footer {
+    display: grid;
+    grid-template-areas: "redes" "derechos" "creados";
+  }
+  .derechos {
+    grid-area: derechos;
+  }
+  .creados {
+    grid-area: creados;
+  }
+  .redes-sociales {
+    grid-area: redes;
+  }
+}

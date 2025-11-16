@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster&display=swap");
+
+$color_1: rgba(0, 0, 0, 0.692);
+$color_2: darksalmon;
+$font-family_1: "Lobster", sans-serif;
+$font-family_2: Georgia, "Times New Roman", Times, serif;
+$font-family_3: sans-serif;
+$background-color_1: whitesmoke;
+$background-color_2: bisque;
+
+
+*{
+    font-family: $font-family_1;
+    color: $color_1;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center ;
+}
+
+
+//Extends y Mixins//
+
+@mixin flex($direction, $justify, $alain, $wrap){
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $alain;
+        flex-wrap: $wrap;
+    }
+
+.conteinerpages {
+  margin: 50px;
+  max-width: 1000px;
+  padding-inline: 2rem;}

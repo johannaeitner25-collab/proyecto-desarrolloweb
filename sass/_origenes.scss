@@ -1,0 +1,13 @@
+@use "variables" as v;
+
+.origenes {
+
+@include v.flex(column, center, center, wrap);
+
+
+.section-parrafo {
+    font-family: v.$font-family_2;
+.f-heladeria { width: 30vw;
+  height: auto;}
+}
+}

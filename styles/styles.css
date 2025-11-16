@@ -1,74 +1,152 @@
-.lobster-regular {
-  font-family: "Lobster", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: whitesmoke;
   font-family: "Lobster", sans-serif;
+  color: rgba(0, 0, 0, 0.692);
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.section-parrafo {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.conteinerpages {
+  margin: 50px;
+  max-width: 1000px;
+  padding-inline: 2rem;
 }
 
 header {
   background-color: whitesmoke;
   height: vh;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: sticky;
-  top: 0;
-
 }
-
-.logo {
+header .logo {
   max-width: 10rem;
   align-items: center;
   border-radius: 1rem;
 }
-
-.list {
-  display: flex;
-  gap: 2rem;
-}
-
-a {
+header .navbar-nav .nav-link {
   text-decoration: none;
-  color: inherit;
+  color: rgba(0, 0, 0, 0.692);
+}
+header .navbar-nav .active {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.692);
 }
 
-ul {
-  list-style-type: none;
+footer {
+  color: darksalmon;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer ul {
+  display: flex;
+  gap: 20px;
+}
+footer ul li {
+  list-style: none;
+}
+footer .redes-sociales {
+  list-style: none;
+  height: svh;
+  width: auto;
+  gap: 20px;
+}
+footer .redes-sociales .img {
+  height: 8vh;
+  width: auto;
+}
+footer .derechos {
+  font-size: 15px;
+}
+footer .creado {
+  font-size: 15px;
+}
+footer .imgwapp {
+  height: 8vh;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
 }
 
-.conteiner {
+@media (min-width: 320px) and (max-width: 430px) {
+  footer {
+    display: grid;
+    grid-template-areas: "redes" "derechos" "creados";
+  }
+  .derechos {
+    grid-area: derechos;
+  }
+  .creados {
+    grid-area: creados;
+  }
+  .redes-sociales {
+    grid-area: redes;
+  }
+}
+.contacto div .form-ver {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
   margin: 0 auto;
-  max-width: 1000px;
+}
+
+.origenes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.origenes .section-parrafo {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.origenes .section-parrafo .f-heladeria {
+  width: 30vw;
+  height: auto;
+}
+
+.sabores .img-sabores:hover {
+  scale: 1.2;
+}
+
+.sucursales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sucursales .conteinerpages {
+  margin: 500px;
+  max-width: 1000vw;
   padding-inline: 2rem;
+  color: black;
+  top: 0;
+}
+.sucursales .mapa {
+  width: 80vw;
+  height: auto;
 }
 
 .inicio {
+  color: rgba(0, 0, 0, 0.692);
   display: grid;
-  grid-template-columns: .35fr 1fr;
-  grid-template-areas:
-    "foto titulo"
-    "foto texto";
+  grid-template-columns: 0.35fr 1fr;
+  grid-template-areas: "foto titulo" "foto texto";
   column-gap: 2rem;
   padding-block: 3rem;
 }
 
 .imginicio {
   grid-area: foto;
-
 }
 
 .inicio-titulo {
@@ -82,163 +160,37 @@ ul {
 .sabores {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "titulo titulo titulo"
-    "foto foto foto"
-    "texto  . boton ";
+  grid-template-areas: "titulo titulo titulo" "foto foto foto" "texto  . boton ";
   column-gap: 5rem;
   padding-block: 3rem;
   gap: 1.5rem;
-
 }
 
 .img-sabores {
   grid-area: foto;
   width: 80vw;
   height: auto;
-
-}
-
-.section-titulo {
-  grid-area: titulo;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-
-}
-
-.section-parrafo {
-  grid-area: texto;
-}
-
-.btn {
-  grid-area: boton;
 }
 
 .img-auto {
-  width: 80vw;
-}
-
-.inicio-autohelado {
-  column-gap: 5rem;
-  padding-block: 3rem;
-  gap: 1.5rem;
-}
-
-footer {
-  height: 30vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.redes-sociales {
-  list-style: none;
-  display: inline;
-  height: svh;
-  width: auto;
-  display: flex;
-  gap: 20px;
-
-}
-
-.derechos {
-  color: darksalmon;
-  font-size: 15px;
-
-}
-
-.creados {
-  color: darksalmon;
-  font-size: 15px;
-
-}
-
-.imgwapp {
-  height: 8vh;
-  width: auto;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-}
-
-.img {
-  height: 8vh;
-  width: auto;
-}
-
-.conteinerpages {
-  margin: 50px;
-  max-width: 1000px;
-  padding-inline: 2rem;
-}
-
-form {
-  display: flex;
-  flex-flow: column wrap;
-  width: 30vw;
-  justify-content: center;
-  font-family: sans-serif;
-}
-
-input:focus {
-  background-color: bisque;
-}
-
-.imgsab {
-  width: 80vw;
-  height: auto;
-}
-
-.imgsab:hover {
-  scale: 1.2;
+  width: 50vw;
 }
 
 @media (min-width: 320px) and (max-width: 430px) {
   .inicio {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "titulo "
-      "foto "
-      "texto ";
+    grid-template-areas: "titulo " "foto " "texto ";
   }
-
   .imginicio {
     grid-area: foto;
   }
-
   .inicio-titulo {
     grid-area: titulo;
   }
-
   .inicio-parrafo {
     grid-area: texto;
-
-
   }
-
-  footer {
-    display: grid;
-    grid-template-areas:
-      "redes"
-      "derechos"
-      "creados"
-    ;
-  }
-
-  .derechos {
-    grid-area: derechos;
-  }
-
-  .creados {
-    grid-area: creados;
-
-  }
-
-  .redes-sociales {
-    grid-area: redes;
-  }
-
-
 }
+
+/*# sourceMappingURL=styles.css.map */

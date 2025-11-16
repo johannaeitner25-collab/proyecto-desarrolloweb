@@ -1,0 +1,66 @@
+@use "variables" as v;
+.inicio {
+    color: v.$color_1;
+	display: grid;
+	grid-template-columns: .35fr 1fr;
+	grid-template-areas: "foto titulo" "foto texto";
+	column-gap: 2rem;
+	padding-block: 3rem;
+}
+.imginicio {
+	grid-area: foto;
+}
+.inicio-titulo {
+	grid-area: titulo;
+}
+.inicio-parrafo {
+	grid-area: texto;
+}
+.sabores {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "titulo titulo titulo"
+    "foto foto foto"
+    "texto  . boton ";
+  column-gap: 5rem;
+  padding-block: 3rem;
+  gap: 1.5rem;
+
+}
+
+.img-sabores {
+  grid-area: foto;
+  width: 80vw;
+  height: auto;
+
+}
+
+.img-auto {
+  width: 50vw;
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+  .inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titulo "
+      "foto "
+      "texto ";
+  }
+
+  .imginicio {
+    grid-area: foto;
+  }
+
+  .inicio-titulo {
+    grid-area: titulo;
+  }
+
+  .inicio-parrafo {
+    grid-area: texto;
+
+
+  }
+}

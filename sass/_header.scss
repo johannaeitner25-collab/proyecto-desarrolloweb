@@ -1,0 +1,32 @@
+@use "variables" as v;
+
+header {
+background-color: v.$background-color_1;
+height: vh;
+position: sticky;
+top: 0;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+
+
+.logo {
+  max-width: 10rem;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.navbar-nav {
+ .nav-link {
+     text-decoration: none;
+  color: v.$color_1;
+}
+.active {
+    text-decoration: none;
+    color: v.$color_1
+}
+
+}  
+}
+

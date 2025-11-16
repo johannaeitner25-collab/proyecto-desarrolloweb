@@ -1,0 +1,12 @@
+@use "variables" as v;
+
+.contacto {
+
+div .form-ver {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  max-width: 400px; 
+  margin: 0 auto; 
+}
+}
