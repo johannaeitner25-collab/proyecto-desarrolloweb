@@ -33,6 +33,8 @@
   grid-area: foto;
   width: 80vw;
   height: auto;
+  justify-self: center; 
+  align-self: center; 
 
 }
 
@@ -40,18 +42,23 @@
   width: 50vw;
 }
 
-@media (min-width: 320px) and (max-width: 430px) {
+
+@media (max-width: 968px) {
   .inicio {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; 
     grid-template-areas:
-      "titulo "
-      "foto "
-      "texto ";
+      "titulo"
+      "foto"
+      "texto";
+    padding: 0 16px; 
+    box-sizing: border-box;
   }
 
   .imginicio {
     grid-area: foto;
+    max-width: 100%; 
+    height: auto; 
   }
 
   .inicio-titulo {
@@ -60,7 +67,33 @@
 
   .inicio-parrafo {
     grid-area: texto;
-
-
   }
 }
+
+@media (min-width: 320px) and (max-width: 430px) {
+  .inicio {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+      "titulo"
+      "foto"
+      "texto";
+    padding: 0 16px; 
+    box-sizing: border-box; 
+  }
+
+  .imginicio {
+    grid-area: foto;
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .inicio-titulo {
+    grid-area: titulo;
+  }
+
+  .inicio-parrafo {
+    grid-area: texto;
+  }
+}
+

@@ -16,3 +16,8 @@
   height: auto;
 }
 }
+
+@media (min-width: 320px) and (max-width: 430px) {
+  .mapa { width: 60vw;
+  height: auto;}
+}

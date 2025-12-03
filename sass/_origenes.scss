@@ -6,8 +6,18 @@
 
 
 .section-parrafo {
-    font-family: v.$font-family_2;
+    font-family: v.$font-family_3;
 .f-heladeria { width: 30vw;
   height: auto;}
 }
+}
+
+@media (min-width: 431) and (max-width: 968px) {
+  .f-heladeria { width: 60vw;
+  height: auto;}
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+  .f-heladeria { width: 60vw;
+  height: auto;}
 }

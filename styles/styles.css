@@ -106,13 +106,25 @@ footer .imgwapp {
   flex-wrap: wrap;
 }
 .origenes .section-parrafo {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: sans-serif;
 }
 .origenes .section-parrafo .f-heladeria {
   width: 30vw;
   height: auto;
 }
 
+@media (min-width: 431) and (max-width: 968px) {
+  .f-heladeria {
+    width: 60vw;
+    height: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 430px) {
+  .f-heladeria {
+    width: 60vw;
+    height: auto;
+  }
+}
 .sabores .img-sabores:hover {
   scale: 1.2;
 }
@@ -136,6 +148,12 @@ footer .imgwapp {
   height: auto;
 }
 
+@media (min-width: 320px) and (max-width: 430px) {
+  .mapa {
+    width: 60vw;
+    height: auto;
+  }
+}
 .inicio {
   color: rgba(0, 0, 0, 0.692);
   display: grid;
@@ -170,20 +188,46 @@ footer .imgwapp {
   grid-area: foto;
   width: 80vw;
   height: auto;
+  justify-self: center;
+  align-self: center;
 }
 
 .img-auto {
   width: 50vw;
 }
 
-@media (min-width: 320px) and (max-width: 430px) {
+@media (max-width: 968px) {
   .inicio {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "titulo " "foto " "texto ";
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "foto" "texto";
+    padding: 0 16px;
+    box-sizing: border-box;
   }
   .imginicio {
     grid-area: foto;
+    max-width: 100%;
+    height: auto;
+  }
+  .inicio-titulo {
+    grid-area: titulo;
+  }
+  .inicio-parrafo {
+    grid-area: texto;
+  }
+}
+@media (min-width: 320px) and (max-width: 430px) {
+  .inicio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "foto" "texto";
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  .imginicio {
+    grid-area: foto;
+    max-width: 100%;
+    height: auto;
   }
   .inicio-titulo {
     grid-area: titulo;
